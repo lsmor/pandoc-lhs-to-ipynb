@@ -34,10 +34,8 @@ This is a list using markdown regular syntax
 This can be handle by pandoc, but ghci wont load this file because of two different styles of code.
 
 \begin{code}
-
 more = "code" `elem` ["different", "style"]
 dont = "mix different style in one literate file."
-
 \end{code}
 
 === Quoteblock syntax
