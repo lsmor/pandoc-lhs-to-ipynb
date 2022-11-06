@@ -3,7 +3,7 @@
 This repository contains a few examples on how to convert Literate Haskell files to other formats. It includes a very small lua filter which allows conversion from Literate Haskell files to jupyter notebooks.
 
 ```bash
-pandoc -s                                      
+pandoc -s \
        --from markdown+lhs \                   # set the source style as markdown with Literate Haskell rules
        --to ipynb \                            # set target style as a jupter notebook
        --lua-filter path/to/lhs-to-ipynb.lua \ # tell pandoc to use this lua filter. Pandoc includes a lua interpreter, so no need to extra deps.
