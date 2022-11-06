@@ -25,4 +25,4 @@ Literate comments should be written in markdown style with the following convent
 - Luckily `ghc` interprets `>` as `Haskell` code, if and only if `>` is in the first column, so use `[space]>` to write a markdown quoteblock.
 - Always surround `Haskell` code by blank lines. This is not required by either `ghc` nor `pandoc` but it might cause some undesired edge cases: for example a quoteblock followed by `haskell` code is wrongly interpreted as a single quoteblock.
 
-In folder [example](./example) you can find a literate haskell file [literate.hls](./example/literate.lhs) and the corresponding jupyter notebook generated with pandoc
+In folder [example](./example) you can find a literate haskell file [literate.lhs](./example/literate.lhs) and the corresponding jupyter notebook generated with pandoc
