@@ -13,6 +13,25 @@ pandoc -s
 
 This filter is so simple that probably can be achive with a command line option, but I am too lazy to investigate it
 
+## Other styles
+
+For output format can be other than `ipynb` don't use this filter, as it will prevent code style. In example folder there are [markdown](./example/literate.md) and [html](example/literate.html) outputs generated with
+
+- lhs to regular markdown
+
+```bash
+
+# Force atx header to avoid underliying level 1 and two headers
+pandoc -s --markdown-headings=atx --from markdown+lhs --to markdown -o example/literate.md example/literate.lhs
+```
+
+- lhs to html
+
+```bash
+pandoc -s --from markdown+lhs --to html -o example/literate.html example/literate.lhs
+```
+
+
 ## Syntactic considerations
 
 Literate comments should be written in markdown style with the following conventions:
