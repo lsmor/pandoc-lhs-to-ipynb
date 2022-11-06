@@ -3,12 +3,12 @@
 This is a very small lua filter which allows conversion from literate haskell files to notebooks. Use the follwing command:
 
 ```bash
-#                |- set the source style as markdown with literate haskell rules
-#                |                 |- set target style as a jupter notebook
-#                |                 |                  |- tell pandoc to use this lua filter. Pandoc includes a lua interpreter, so no need to extra deps.
-#                |                 |                  |                           |- output file path
-#                |                 |                  |                           |                    |- input file path
-pandoc -s --from markdown+lhs --to ipynb --lua-filter path/to/lhs-to-ipynb.lua -o path/to/output.ipynb path/to/input.lhs 
+pandoc -s                                      
+       --from markdown+lhs \                   # set the source style as markdown with literate haskell rules
+       --to ipynb \                            # set target style as a jupter notebook
+       --lua-filter path/to/lhs-to-ipynb.lua \ # tell pandoc to use this lua filter. Pandoc includes a lua interpreter, so no need to extra deps.
+       -o path/to/output.ipynb \               # output file path
+       path/to/input.lhs                       # intput file path
 ```
 
 This filter is so simple that probably can be achive with a command line option, but I am too lazy to investigate it
